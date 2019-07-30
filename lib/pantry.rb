@@ -13,7 +13,12 @@ end
   end
 
   def enough_ingredients_for_recipe(recipe)
-    recipe.ingredients_required.each do |ingredient, quantity|
+    # if stock_check(ingredient)
+    # stock_check(ingredieng) >=
+
+    # stock_check >= ingredients_amount
+
+      recipe.amount_required[ingredient].each do |ingredient, quantity|
       stock_check(ingredient) >= quantity
     end
   end
