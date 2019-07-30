@@ -9,6 +9,12 @@ end
   end
 
   def restock(ingredient, quantity)
-    
+    @stock[ingredient] += quantity
+  end
+
+  def enough_ingredients_for_recipe(recipe)
+    recipe.ingredients_required.each do |ingredient, quantity|
+      stock_check(ingredient) >= quantity
+    end
   end
 end
